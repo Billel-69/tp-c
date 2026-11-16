@@ -18,7 +18,7 @@ L'objectif du premier exercice est de comprendre le fonctionnement de l'interpr�
 
 **Étapes :**
 
-1. Compilez et exécutez le programme `repl.c` (dossier `interpreteur/src/`) avec le `Makefile` fourni (ou directement avec `gcc`, voir [interpreteur/README.md](../interpreteur/README.md)) :
+1. Compilez et exécutez le programme `repl.c` (dossier `interpreteur/src/`) avec le `Makefile` fourni (ou directement avec `gcc`, voir [interpreteur/READ ME.md](../interpreteur/README.md)) :
 
 ```bash
 $ cd interpreteur

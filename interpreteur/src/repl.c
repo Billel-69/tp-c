@@ -1,10 +1,32 @@
 #include <stdio.h>
 #include <string.h>
-
+#define VERSION "0.1"
+#define APPLICATION "PLP"
 /**
  * Programme qui simule un interpréteur de commandes simple.
  * Il lit les commandes utilisateur et les traite en fonction de leur contenu.
  */
+void afficher_aider() {
+    
+}
+
+void afficher_version(){
+    printf("%s version %s\n", APPLICATION, VERSION);
+}
+
+void traiter_echo(char commande[1024]) {
+    int i =0;
+    while (commande[i] != '\0') {
+        if (i<4) {
+            i++;
+            continue;
+        }
+        else {
+            printf("%c", commande[i]);
+            i++;
+        }
+    }
+}
 
 int main()
 {
@@ -38,15 +60,10 @@ int main()
         }
         else if (strncmp(commande, "echo ", 5) == 0)
         {
-            // Traite la commande "echo" pour afficher du texte
-            printf("Echo: ");
-
-            // Imprime la chaîne
-            for (int i = 5; commande[i] != '\0'; i++)
-            {
-                printf("%c", commande[i]);
-            }
-            printf("\n"); // Saut de ligne après la sortie
+            traiter_echo(commande);
+        }
+        else if (strncmp(commande, "version ", 5) == 0) {
+            afficher_version();
         }
         else
         {
